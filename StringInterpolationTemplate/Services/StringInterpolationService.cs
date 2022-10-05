@@ -27,53 +27,98 @@ public class StringInterpolationService : IStringInterpolationService
     }
 
     public string Number02()
-    {
-        throw new NotImplementedException();
+    {   
+        var date = _date.Now.ToString("yyyy.dd.MM");
+        var answer = date;
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number03()
     {
-        throw new NotImplementedException();
+
+        var date = "Day" + $"{_date.Now: d}" + " of " + $"{_date.Now:MMMM, yyyy}";
+        var answer =date;
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number04()
     {
-        throw new NotImplementedException();
+        var date = "Year: " + $"{_date.Now:yyyy}," + " Month: " + $"{_date.Now:MM}," + " Day: " + $"{_date.Now:dd}" ;
+        var answer = date;
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number05()
     {
-        throw new NotImplementedException();
+        var date = $"{_date.Now:dddd}";
+        var answer = $"{date,10}";
+        Console.WriteLine(answer);
+
+        return answer;
+
     }
 
     public string Number06()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("hh:mm tt");
+        var day = _date.Now.ToString("dddd");
+        var answer = $"{date,10}" + $"{day,10}";
+        Console.WriteLine(answer);
+
+        return answer;
+
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        var date = "h:" + $"{_date.Now:hh}" + ", m:" + $"{_date.Now:mm}" + ", s:" + $"{_date.Now:ss}";
+        var answer = date; 
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy.MM.dd.hh.mm.ss");
+        var answer = date;
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        var answer = $"{pi:C}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        var answer = $"{pi,10:n3}";
+
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     public string Number11()
     {
-        throw new NotImplementedException();
+        var date = _date.Now.ToString("yyyy");
+        var answer = $"{date: X2}";
+        Console.WriteLine(answer);
+
+        return answer;
     }
 
     //2.2019.01.22
